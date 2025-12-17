@@ -27,7 +27,8 @@
                         </div>
                         <div class="info-content">
                             <h4>Our Address</h4>
-                            <p>1842 Maple Avenue, Portland, Oregon 97204</p>
+                            <p>Perum Jl. Griya Brondong Rejo Permai No.Blok B22 RT01, RW.03, Brondongrejo, Purwodadi,
+                                Purworejo Regency, Central Java 54173</p>
                         </div>
                     </div>
                 </div>
@@ -39,8 +40,8 @@
                         </div>
                         <div class="info-content">
                             <h4>Email Address</h4>
-                            <p>info@example.com</p>
-                            <p>contact@example.com</p>
+                            <p>mulyadi@gmail.com</p>
+                            <p>tokoberasmul@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -64,75 +65,12 @@
         <!-- Google Maps (Full Width) -->
         <div class="map-section" data-aos="fade-up" data-aos-delay="200">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d555.8563338776469!2d109.98093662066933!3d-7.780147576578518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ae978140a2ef7%3A0x7878afe088395fd5!2sRumah%20Pak%20Mulyadi!5e0!3m2!1sid!2sid!4v1765986509828!5m2!1sid!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <!-- Contact Form Section (Overlapping) -->
-        <div class="container form-container-overlap">
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="col-lg-10">
-                    <div class="contact-form-wrapper">
-                        <h2 class="text-center mb-4">Get in Touch</h2>
 
-                        <form action="forms/contact.php" method="post" class="php-email-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-person"></i>
-                                            <input type="text" class="form-control" name="name"
-                                                placeholder="First Name" required="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-envelope"></i>
-                                            <input type="email" class="form-control" name="email"
-                                                placeholder="Email Address" required="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-text-left"></i>
-                                            <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                                required="">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-chat-dots message-icon"></i>
-                                            <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
     </section><!-- /Contact 2 Section -->
 @endsection

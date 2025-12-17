@@ -30,30 +30,32 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row"><a href="#">#2457</a></th>
-                            <td>Brandon Jacob</td>
-                            <td>
-                                <ul>
-                                    <li>Beras Premium 5kg</li>
-                                    <li>Beras Premium 25kg</li>
-                                </ul>
-                            </td>
-                            <td>$64</td>
-                            <td>
-                                <div class="status-container position-relative d-inline-block">
-                                    <span class="badge bg-success status-badge" style="cursor:pointer;">Approved</span>
-                                    <select class="form-select form-select-sm status-select position-absolute top-0 start-0"
-                                        style="display:none; width:130px;">
-                                        <option value="Approved" selected>Approved</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Rejected">Rejected</option>
-                                        <option value="On Hold">On Hold</option>
+                        @foreach ($orders as $order)
+                            <tr>
+                                <th>{{ $loop->iteration }}</th>
+                                <td>{{ $order->user->name }}</td>
+                                <td>
+                                    <ul>
+                                        @foreach ($order->items as $item)
+                                            <li>{{ $item->product_name }} ({{ $item->qty }})</li>
+                                        @endforeach
+                                    </ul>
+                                </td>
+                                <td>Rp {{ number_format($order->total, 0, ',', '.') }}</td>
+                                <td>
+                                    <select class="form-select form-select-sm"
+                                        onchange="updateStatus({{ $order->id }}, this.value)">
+                                        @foreach (['Pending', 'Approved', 'Rejected', 'On Hold'] as $st)
+                                            <option value="{{ $st }}" @selected($order->status == $st)>
+                                                {{ $st }}
+                                            </option>
+                                        @endforeach
                                     </select>
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
+
                 </table>
 
             </div>
@@ -101,6 +103,20 @@
                 badge.style.display = 'inline-block';
             });
         });
+    </script>
+    <script>
+        function updateStatus(id, status) {
+            fetch(`/admin/pesanan/${id}/status`, {
+                method: 'PATCH',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    status
+                })
+            });
+        }
     </script>
 @endsection
 @endsection
